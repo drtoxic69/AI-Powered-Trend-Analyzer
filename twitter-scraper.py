@@ -2,12 +2,12 @@ import tweepy
 import pandas as pd
 
 # Set up Twitter API v2 credentials
-bearer_token = "YOUR-BEARER-TOKEN-HERE"  # Replace with your actual Bearer Token from Twitter Developer Portal
+bearer_token = "AAAAAAAAAAAAAAAAAAAAAJ5wwwEAAAAAa%2BvBAmAl5hnW2%2BeqtnfK%2BBe%2B0Lo%3DdS4NluTFnUa0EWVrL5KCOClnmEjqRTyDJvMOS8yTMNneHGH1cB"  # Replace with your actual Bearer Token from Twitter Developer Portal
 
 # Initialize Tweepy client for API v2
 client = tweepy.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
 
-# Define search query (adjust to API v2 format)
+# Define search query
 search_query = "ref world cup -is:retweet -is:reply"
 
 # Number of tweets to retrieve
@@ -26,7 +26,7 @@ try:
     # Create a container for extracted tweet attributes
     attributes_container = []
     for tweet in tweets.data:
-        # Pulling relevant tweet details
+        # Pull relevant tweet details
         attributes_container.append([
             tweet.author_id,                     # User ID
             tweet.created_at,                    # Date Created
@@ -40,7 +40,10 @@ try:
 
     # Create DataFrame
     tweets_df = pd.DataFrame(attributes_container, columns=columns)
-    print(tweets_df.head())
+
+    # Save to CSV
+    tweets_df.to_csv("tweets.csv", index=False)
+    print("Tweets saved to tweets.csv")
 
 except tweepy.TweepyException as e:
     print('Status Failed On:', str(e))
