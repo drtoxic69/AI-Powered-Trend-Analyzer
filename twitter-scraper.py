@@ -1,8 +1,11 @@
+import os
 import tweepy
 import pandas as pd
+from dotenv import load_dotenv
+load_dotenv()
 
 # Set up Twitter API v2 credentials
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAJ5wwwEAAAAAa%2BvBAmAl5hnW2%2BeqtnfK%2BBe%2B0Lo%3DdS4NluTFnUa0EWVrL5KCOClnmEjqRTyDJvMOS8yTMNneHGH1cB"  # Replace with your actual Bearer Token from Twitter Developer Portal
+bearer_token = os.getenv('BEARER_TOKEN')
 
 # Initialize Tweepy client for API v2
 client = tweepy.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
