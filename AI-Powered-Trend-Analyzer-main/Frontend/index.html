@@ -9,11 +9,21 @@
 <body>
     <div class="chat-container">
         <header class="chat-header">
-            <h1>Trend Analyzer</h1>
+            <h1>ChatGPT</h1>
+            <button id="historyButton">View History</button>
         </header>
+        
+        <!-- History Tab -->
+        <div id="historyTab" class="history-tab" style="display: none;">
+            <!-- Chat history sessions will be loaded here dynamically -->
+        </div>
+        
+        <!-- Chat Box -->
         <div class="chat-box" id="chatBox">
             <!-- Chat messages will be appended here dynamically -->
         </div>
+        
+        <!-- Input Box -->
         <div class="input-box">
             <input type="text" id="userInput" placeholder="Type your message...">
             <button id="sendButton">Send</button>
