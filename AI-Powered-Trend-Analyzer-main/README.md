@@ -1,1 +1,0 @@
-# AI-Powered-Trend-Analyzer
