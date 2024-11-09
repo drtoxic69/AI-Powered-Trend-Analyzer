@@ -1,1 +1,0 @@
-https://randomuser.me/api/
