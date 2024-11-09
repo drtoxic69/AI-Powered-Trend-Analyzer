@@ -3,4 +3,6 @@
 *.csv
 fake-tweets.py
 tempCodeRunnerFile.py
-tempCodeRunnerFile.py
+__pycache__
+*.ipynb_checkpoints
+chroma
