@@ -48,5 +48,9 @@ try:
     tweets_df.to_csv("tweets.csv", index=False)
     print("Tweets saved to tweets.csv")
 
+    # Load and display the saved tweets
+    loaded_tweets_df = pd.read_csv("tweets.csv")
+    print(loaded_tweets_df)
+
 except tweepy.TweepyException as e:
     print('Status Failed On:', str(e))
