@@ -80,7 +80,7 @@ body {
 }
 
 .bot-message {
-    background-color: #f4f4f4;
+    background-color: #d58d8d;
     align-self: flex-end;
     opacity: 0;
     animation: crumble 0.5s forwards;
