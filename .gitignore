@@ -1,5 +1,5 @@
 .env
 .DS_Store
-node_modules/*
 *.csv
 fake-tweets.py
+tempCodeRunnerFile.py
