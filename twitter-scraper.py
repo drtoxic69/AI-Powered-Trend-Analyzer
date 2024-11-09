@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Set up Twitter API v2 credentials
-bearer_token = os.getenv('BEARER_TOKEN')
+bearer_token = os.getenv('BEARER_TOKEN')  # Import bearer token from .env
 
 # Initialize Tweepy client for API v2
 client = tweepy.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
@@ -40,10 +40,10 @@ try:
 
     # Define column names
     columns = ["User ID", "Date Created", "Number of Likes", "Source of Tweet", "Tweet"]
-
+    print(tweets.data)
     # Create DataFrame
     tweets_df = pd.DataFrame(attributes_container, columns=columns)
-
+    
     # Save to CSV
     tweets_df.to_csv("tweets.csv", index=False)
     print("Tweets saved to tweets.csv")
