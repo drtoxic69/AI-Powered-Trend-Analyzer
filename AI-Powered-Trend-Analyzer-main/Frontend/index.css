@@ -81,5 +81,23 @@ body {
 
 .bot-message {
     background-color: #f4f4f4;
-    align-self: flex-start;
+    align-self: flex-end;
+    opacity: 0;
+    animation: crumble 0.5s forwards;
+    margin-left: auto;
+}
+
+@keyframes crumble {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
